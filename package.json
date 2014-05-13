@@ -12,7 +12,13 @@
         "url": "git@github.com:lb1064/temp.git"
     },
     "dependencies": {
-        "grunt":"*",
-        "ispriter":"*"
+        "grunt": "*",
+        "yhd-grunt-less": "*",
+        "grunt-csscomb": "*",
+        "grunt-contrib-watch": "*",
+        "grunt-contrib-connect": "*",
+        "grunt-contrib-copy": "*",
+        "grunt-contrib-clean":"*",
+        "ispriter": "*"
     }
 }

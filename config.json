@@ -1,12 +1,14 @@
 {
-    "input": ["less/*.css"],
+    "input": "css/*.css",
     "output": {
-
         "cssDist": "build/css/",
 
-        "imageDist": "build/image/",
+        "imageDist": "../images/",
 
-        "margin": 5
+        "margin": 5,
 
+        "combine": true,
+
+        "copyUnspriteImage": true
     }
 }

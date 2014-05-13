@@ -1,0 +1,12 @@
+{
+    "input": ["less/*.css"],
+    "output": {
+
+        "cssDist": "build/css/",
+
+        "imageDist": "build/image/",
+
+        "margin": 5
+
+    }
+}

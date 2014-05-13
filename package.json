@@ -1,0 +1,18 @@
+{
+    "name": "temp",
+    "description": "project temp",
+    "version": "0.0.1",
+    "homepage": "https://github.com/lb1064/temp",
+    "author": {
+        "name": "lb1064",
+        "url": "http://lb1064.github.io/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:lb1064/temp.git"
+    },
+    "dependencies": {
+        "grunt":"*",
+        "ispriter":"*"
+    }
+}

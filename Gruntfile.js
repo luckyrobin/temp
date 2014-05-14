@@ -78,6 +78,11 @@ module.exports = function (grunt) {
                 dest: 'css/',
                 ext: '.css'
             }
+        },
+        clean: {
+            build: {
+                src: 'build/'
+            }
         }
 
 
@@ -88,6 +93,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-csscomb');
+    grunt.loadNpmTasks('grunt-contrib-clean');
 
     grunt.task.registerTask('sp', function () {
         var done = this.async();
@@ -97,5 +103,5 @@ module.exports = function (grunt) {
     });
     grunt.task.registerTask('default', ['less', 'connect', 'watch']);
 
-    grunt.task.registerTask('build', ['csscomb', 'copy', 'sp']);
+    grunt.task.registerTask('build', ['csscomb', 'clean', 'copy', 'sp']);
 };

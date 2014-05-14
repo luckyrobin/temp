@@ -7,8 +7,8 @@
 
         "margin": 5,
 
-        "combine": true,
+        "copyUnspriteImage": true,
 
-        "copyUnspriteImage": true
+        "compress":false
     }
 }

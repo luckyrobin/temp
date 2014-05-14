@@ -2,6 +2,7 @@ module.exports = function (grunt) {
 
     // Project configuration.
     grunt.initConfig({
+//        less文件处理
         less: {
             compile: {
                 options: {
@@ -32,7 +33,7 @@ module.exports = function (grunt) {
         watch: {
             livereload: {
                 // 指定要监控的文件
-                files: ['less/*'],
+                files: ['less/*', 'js/*', '*.html'],
                 // less变动，立即编译
                 tasks: ["less"],
                 options: {
@@ -41,6 +42,7 @@ module.exports = function (grunt) {
                 }
             }
         },
+        //      静态服务器 自动刷新
         connect: {
             options: {
                 port: 9999,
@@ -70,6 +72,7 @@ module.exports = function (grunt) {
                 ]
             }
         },
+        //      css属性排序
         csscomb: {
             mu: {
                 expand: true,
@@ -79,15 +82,16 @@ module.exports = function (grunt) {
                 ext: '.css'
             }
         },
+        //清理文件
         clean: {
             build: {
                 src: 'build/'
             }
         }
 
-
-
     });
+
+//    加载所需模块
     grunt.loadNpmTasks('yhd-grunt-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-connect');
@@ -95,13 +99,17 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-csscomb');
     grunt.loadNpmTasks('grunt-contrib-clean');
 
-    grunt.task.registerTask('sp', function () {
+//    自定义spriter模块
+    grunt.task.registerTask('spriter', function () {
         var done = this.async();
         var spriter = require('ispriter');
         var configFile = 'config.json';
         spriter.merge(configFile);
     });
+
+//    开发时task
     grunt.task.registerTask('default', ['less', 'connect', 'watch']);
 
-    grunt.task.registerTask('build', ['csscomb', 'clean', 'copy', 'sp']);
+//    构建task
+    grunt.task.registerTask('build', ['csscomb', 'clean', 'copy', 'spriter']);
 };

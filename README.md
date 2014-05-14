@@ -2,12 +2,12 @@
 
 
 ###现有流程
->less文件自动编译
->watch改动
->connect静态服务器配合自动刷新
->css属性自动排序
->css压缩成单行
->自动cssSpriter
+- less文件自动编译
+- watch改动
+- connect静态服务器配合自动刷新
+- css属性自动排序
+- css压缩成单行
+- 自动cssSpriter
 
 
 
